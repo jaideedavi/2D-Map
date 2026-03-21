@@ -149,20 +149,19 @@ private GunScript gun;
  * same goes for the sword.
  * Incase we dont have a weapon or gun or it didnt find it, it will write into the console that it cant find a weapon.
  */
-void WeaponRotation(){
-	if(!weapon){
-		weapon = GameObject.FindGameObjectWithTag("Weapon");
-		if(weapon){
-			if(weapon.GetComponent<GunScript>()){
-				try{
-					gun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<GunScript>();
-				}catch(System.Exception ex){
-					print("gun not found->"+ex.StackTrace.ToString());
-				}
-			}
-		}
-	}
-
+void WeaponRotation() {
+    if (weapon == null) {
+        Debug.Log("Trying to find Weapon by tag...");
+        weapon = GameObject.FindGameObjectWithTag("Weapon");
+        if (weapon == null) {
+            Debug.LogError("Weapon GameObject NOT found with tag 'Weapon'!");
+        } else {
+            Debug.Log("Weapon found: " + weapon.name);
+            gun = weapon.GetComponent<GunScript>();
+            if (gun == null)
+                Debug.LogWarning("GunScript component not found on Weapon!");
+        }
+    }
 }
 
 float deltaTime = 0.0f;
