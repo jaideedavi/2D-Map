@@ -137,6 +137,7 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_FONT_ENGINE_1_6_OR_NEWER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/6000.3.6f1/Editor/Data/Managed/UnityEngine/UnityEditor.AccessibilityModule.dll"
@@ -406,6 +407,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Multiplayer.Center.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Settings.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll"
@@ -436,8 +439,14 @@
 "Assets/Easy FPS/Scripts/GunScript.cs"
 "Assets/Easy FPS/Scripts/MouseLookScript.cs"
 "Assets/Easy FPS/Scripts/PlayerMovementScript.cs"
+"Assets/Scripts/Button.cs"
+"Assets/Scripts/CardMovement.cs"
+"Assets/Scripts/Door.cs"
 "Assets/Scripts/Enemy.cs"
+"Assets/Scripts/KeyCardDoor.cs"
+"Assets/Scripts/PickUp.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/PlayerInventory.cs"
 -langversion:9.0
 /deterministic
 /optimize+

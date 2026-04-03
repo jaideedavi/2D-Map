@@ -2,8 +2,33 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    void OnMouseDown()
+    public int enemyHealth = 100;
+
+    public GameObject keycardPrefab;
+    public Transform dropPoint;
+
+    public void TakeDamage(int damage)
     {
-        gameObject.SetActive(false);
+        enemyHealth -= damage;
+
+        if (enemyHealth <= 0)
+        {
+            Die();
+        }
     }
+
+    void Die()
+    {
+        DropKeycard();
+        Destroy(gameObject);
+    }
+
+    void DropKeycard()
+    {
+        if (keycardPrefab != null)
+        {
+            Instantiate(keycardPrefab, dropPoint.position, Quaternion.identity);
+        }
+    }
+   
 }
