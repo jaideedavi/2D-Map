@@ -4,6 +4,8 @@ public class PlayerInventory : MonoBehaviour
 {
     public bool hasKeycard = false;
 
+    public bool hasMissionItem = false;
+
     public void AddKeycard()
     {
         hasKeycard = true;
